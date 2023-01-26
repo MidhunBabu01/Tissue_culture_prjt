@@ -106,36 +106,8 @@
                                 <ul>
                                     <li><a href="{% url 'Plant_app:index' %}">Home</a></li>
                                     <li><a href="{% url 'Plant_app:about' %}">About</a></li>
-                                    <li><a href="#">Pages</a>
-                                        <ul class="dropdown">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="shop.html">Shop</a>
-                                                <ul class="dropdown">
-                                                    <li><a href="shop.html">Shop</a></li>
-                                                    <li><a href="shop-details.html">Shop Details</a></li>
-                                                    <li><a href="cart.html">Shopping Cart</a></li>
-                                                    <li><a href="checkout.html">Checkout</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="portfolio.html">Portfolio</a>
-                                                <ul class="dropdown">
-                                                    <li><a href="portfolio.html">Portfolio</a></li>
-                                                    <li><a href="single-portfolio.html">Portfolio Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="blog.html">Blog</a>
-                                                <ul class="dropdown">
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="single-post.html">Blog Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="shop.html">Shop</a></li>
-                                    <li><a href="portfolio.html">Portfolio</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="{% url 'Plant_app:products' %}">Products</a></li>
+                                    <li><a href="contact.html">Contact us</a></li>
                                 </ul>
 
                                 <!-- Search Icon -->
@@ -214,7 +186,7 @@
     <!-- ##### Hero Area End ##### -->
 
     <!-- ##### Service Area Start ##### -->
-    <section class="our-services-area bg-gray section-padding-100-0">
+    {% comment %} <section class="our-services-area bg-gray section-padding-100-0">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -238,8 +210,8 @@
                             </div>
                             <!-- Content -->
                             <div class="service-content">
-                                <h5>Plants Care</h5>
-                                <p>In Aenean purus, pretium sito amet sapien denim moste consectet sedoni urna placerat sodales.service its.</p>
+                                <h5>Motherplants collection</h5>
+                                <p>We collect mother plants from local and foreign countries.</p>
                             </div>
                         </div>
 
@@ -247,12 +219,12 @@
                         <div class="single-service-area d-flex align-items-center wow fadeInUp" data-wow-delay="300ms">
                             <!-- Icon -->
                             <div class="service-icon mr-30">
-                                <img src="{% static 'img/core-img/s2.png' %}" alt="">
+                                <img src="{% static 'img/core-img/b1.png' %}" alt="">
                             </div>
                             <!-- Content -->
                             <div class="service-content">
-                                <h5>Pressure Washing</h5>
-                                <p>In Aenean purus, pretium sito amet sapien denim moste consectet sedoni urna placerat sodales.service its.</p>
+                                <h5>Quality Products</h5>
+                                <p>We provide good quality premium plants With professional R&D team.</p>
                             </div>
                         </div>
 
@@ -264,7 +236,7 @@
                             </div>
                             <!-- Content -->
                             <div class="service-content">
-                                <h5>Tree Service &amp; Trimming</h5>
+                                <h5>Efficient Product Builders</h5>
                                 <p>In Aenean purus, pretium sito amet sapien denim moste consectet sedoni urna placerat sodales.service its.</p>
                             </div>
                         </div>
@@ -282,7 +254,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> {% endcomment %}
     <!-- ##### Service Area End ##### -->
 
     <!-- ##### About Area Start ##### -->
@@ -295,7 +267,7 @@
                         <h2>ABOUT US</h2>
                         <p>We are leading in the plants service fields.</p>
                     </div>
-                    <p>Neyyargreenworld Plant tissue culture laboratory located in palakkad Kerala,We aare producing wide verity of ornamental plants. company started at 2022 January.</p>
+                    <p>Neyyargreenworld Plant tissue culture laboratory located in palakkad Kerala,We are producing wide verity of ornamental plants. company started at 2022 January.</p>
 
                     <!-- Progress Bar Content Area -->
                     <div class="alazea-progress-bar mb-50">
@@ -352,8 +324,8 @@
                             <div class="col-12 col-sm-6">
                                 <div class="single-benefits-area">
                                     <img src="{% static 'img/core-img/b1.png' %}" alt="">
-                                    <h5>Quality Products</h5>
-                                    <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
+                                    <h5>Motherplants collection</h5>
+                                    <p>Our motherplants collections from local and foreign countries.</p>
                                 </div>
                             </div>
 
@@ -361,7 +333,7 @@
                             <div class="col-12 col-sm-6">
                                 <div class="single-benefits-area">
                                     <img src="{% static 'img/core-img/b2.png' %}" alt="">
-                                    <h5>Perfect Service</h5>
+                                    <h5>Efficient Product Builders</h5>
                                     <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
                                 </div>
                             </div>
@@ -370,8 +342,8 @@
                             <div class="col-12 col-sm-6">
                                 <div class="single-benefits-area">
                                     <img src="{% static 'img/core-img/b3.png' %}" alt="">
-                                    <h5>100% Natural</h5>
-                                    <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
+                                    <h5>Quality Products</h5>
+                                    <p>We provide good quality premium plants With professional R&D team.</p>
                                 </div>
                             </div>
 
@@ -400,7 +372,7 @@
     <!-- ##### About Area End ##### -->
 
     <!-- ##### Portfolio Area Start ##### -->
-    <section class="alazea-portfolio-area section-padding-100-0">
+    {% comment %} <section class="alazea-portfolio-area section-padding-100-0">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -537,11 +509,11 @@
 
             </div>
         </div>
-    </section>
+    </section> {% endcomment %}
     <!-- ##### Portfolio Area End ##### -->
 
     <!-- ##### Testimonial Area Start ##### -->
-    <section class="testimonial-area section-padding-100">
+    {% comment %} <section class="testimonial-area section-padding-100">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -626,7 +598,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> {% endcomment %}
     <!-- ##### Testimonial Area End ##### -->
 
     <!-- ##### Product Area Start ##### -->

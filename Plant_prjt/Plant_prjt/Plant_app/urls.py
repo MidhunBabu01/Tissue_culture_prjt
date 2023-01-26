@@ -7,6 +7,8 @@ app_name = 'Plant_app'
 
 urlpatterns = [
     path('', views.index,name="index"),
-    path('about/', views.about,name="about")
+    path('about/', views.about,name="about"),
+    path('products/', views.products,name="products")
+    
     
 ]
