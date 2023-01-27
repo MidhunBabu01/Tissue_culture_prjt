@@ -10,7 +10,7 @@ admin.site.register(ProductsCategory,CategoryAdmin)
 
 
 class ProductsAdmin(admin.ModelAdmin):
-    list_display = ['name','slug','category','photo1','photo2','photo3']
+    list_display = ['name','slug','category']
     prepopulated_fields = {'slug':('name',)}
 
-admin.site.register(Products)
+admin.site.register(Products,ProductsAdmin)
