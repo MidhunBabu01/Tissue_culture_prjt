@@ -19,3 +19,8 @@ def products(request):
 
     }
     return render(request,'products.html',context)
+
+
+def products_details(request,slug):
+    details = Products.objects.filter(slug=slug)
+    return render(request,'products-details.html',{'details':details})

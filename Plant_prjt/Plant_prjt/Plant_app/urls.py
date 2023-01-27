@@ -8,7 +8,8 @@ app_name = 'Plant_app'
 urlpatterns = [
     path('', views.index,name="index"),
     path('about/', views.about,name="about"),
-    path('products/', views.products,name="products")
+    path('products/', views.products,name="products"),
+    path('products-details/<slug:slug>', views.products_details,name="products_details")
     
     
 ]

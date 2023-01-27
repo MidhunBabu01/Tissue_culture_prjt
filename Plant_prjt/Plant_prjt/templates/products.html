@@ -369,7 +369,7 @@
                                 <div class="single-product-area mb-50">
                                     <!-- Product Image -->
                                     <div class="">
-                                        <a href="shop-details.html"><img src="{{i.Photo1.url}}" alt=""></a>
+                                        <a href="{% url 'Plant_app:products_details' i.slug %}"><img src="{{i.Photo1.url}}" alt=""></a>
                                     </div>
                                     <!-- Product Info -->
                                     <div class="product-info mt-15 text-center">
