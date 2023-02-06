@@ -24,3 +24,8 @@ def products(request):
 def products_details(request,slug):
     details = Products.objects.filter(slug=slug)
     return render(request,'products-details.html',{'details':details})
+
+
+
+def contact_us(request):
+    return render(request,'contact.html')
