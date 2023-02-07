@@ -13,13 +13,20 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Alazea - Gardening &amp; Landscaping HTML Template</title>
+    <title>Neyyargreenworld</title>
 
     <!-- Favicon -->
     <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <style>
+        .logo{
+            height:70px;
+            width:100px;
+        }
+    </style>
 
 </head>
 
@@ -36,7 +43,7 @@
     <header class="header-area">
 
         <!-- ***** Top Header Area ***** -->
-        <div class="top-header-area">
+        {% comment %} <div class="top-header-area">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -76,7 +83,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> {% endcomment %}
 
         <!-- ***** Navbar Area ***** -->
         <div class="alazea-main-menu">
@@ -86,7 +93,7 @@
                     <nav class="classy-navbar justify-content-between" id="alazeaNav">
 
                         <!-- Nav Brand -->
-                        <a href="{% url 'Plant_app:index' %}" class="nav-brand"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
+                        <a href="{% url 'Plant_app:index' %}" class="nav-brand"><img src="{% static 'img/core-img/logo.png' %}" class="logo" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -159,25 +166,7 @@
             </div>
 
             <!-- Single Hero Post -->
-            <div class="single-hero-post bg-overlay">
-                <!-- Post Image -->
-                <div class="slide-img bg-img" style="background-image: url({% static 'img/bg-img/2.jpg' %});"></div>
-                <div class="container h-100">
-                    <div class="row h-100 align-items-center">
-                        <div class="col-12">
-                            <!-- Post Content -->
-                            <div class="hero-slides-content text-center">
-                                <h2>Plants exist in the weather and light rays that surround them</h2>
-                                {% comment %} <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque ante nec ipsum iaculis, ac iaculis ipsum porttitor. Vivamus cursus nisl lectus, id mattis nisl lobortis eu. Duis diam augue, dapibus ut dolor at, mattis maximus dolor.</p>
-                                <div class="welcome-btn-group">
-                                    <a href="#" class="btn alazea-btn mr-30">GET STARTED</a>
-                                    <a href="#" class="btn alazea-btn active">CONTACT US</a>
-                                </div> {% endcomment %}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
 
         </div>
     </section>
@@ -889,7 +878,7 @@
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget">
                             <div class="footer-logo mb-30">
-                                <a href="#"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
+                                <a href="#"><img src="{% static 'img/core-img/logo.png' %}" class="logo" alt=""></a>
                             </div>
                             <p>Lorem ipsum dolor sit samet, consectetur adipiscing elit. India situs atione mantor</p>
                             <div class="social-info">

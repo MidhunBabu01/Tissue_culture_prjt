@@ -22,6 +22,13 @@
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="{% static 'style.css' %}">
 
+    <style>
+        .logo{
+            height:70px;
+            width:100px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -37,7 +44,7 @@
     <header class="header-area">
 
         <!-- ***** Top Header Area ***** -->
-        <div class="top-header-area">
+        {% comment %} <div class="top-header-area">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -77,7 +84,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> {% endcomment %}
 
         <!-- ***** Navbar Area ***** -->
         <div class="alazea-main-menu">
@@ -87,7 +94,7 @@
                     <nav class="classy-navbar justify-content-between" id="alazeaNav">
 
                         <!-- Nav Brand -->
-                        <a href="{% url 'Plant_app:index' %}" class="nav-brand"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
+                        <a href="{% url 'Plant_app:index' %}" class="nav-brand"><img src="{% static 'img/core-img/logo.png' %}" class="logo" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -175,11 +182,11 @@
                     </div>
                     <!-- Contact Information -->
                     <div class="contact-information">
-                        <p><span>Address:</span> 505 Silk Rd, New York</p>
-                        <p><span>Phone:</span> +1 234 122 122</p>
-                        <p><span>Email:</span> info.deercreative@gmail.com</p>
-                        <p><span>Open hours:</span> Mon - Sun: 8 AM to 9 PM</p>
-                        <p><span>Happy hours:</span> Sat: 2 PM to 4 PM</p>
+                        <p><span>Address:</span> 16/295 Kakkamukal, Kattakkada <br>Thiruvanannthapuram, kerala 695572</p>
+                        <p><span>Phone:</span> +91 6363290771</p>
+                        <p><span>Email:</span> neyyargreenworld@gmail.com</p>
+                        <p><span>Open hours:</span> Mon - Sun: 9 AM to 6 PM</p>
+                        {% comment %} <p><span>Happy hours:</span> Sat: 2 PM to 4 PM</p> {% endcomment %}
                     </div>
                 </div>
             </div>
@@ -237,7 +244,8 @@
                 <div class="col-12 col-lg-6">
                     <!-- Google Maps -->
                     <div class="map-area mb-100">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8069503.969985961!2d76.22719540312501!3d9.046656222615196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bbb805bbcd47%3A0x15439fab5c5c81cb!2sThiruvananthapuram%2C%20Kerala!5e0!3m2!1sen!2sin!4v1675695754382!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        {% comment %} <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8069503.969985961!2d76.22719540312501!3d9.046656222615196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bbb805bbcd47%3A0x15439fab5c5c81cb!2sThiruvananthapuram%2C%20Kerala!5e0!3m2!1sen!2sin!4v1675695754382!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> {% endcomment %}
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.8244774029395!2d77.09614189999999!3d8.516416499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05b15a2cd60057%3A0xd76d69dc79baeb1a!2sPlankalakonam%20-%20Onamcode%20Rd%2C%20Kattakkada%2C%20Kerala%20695572!5e0!3m2!1sen!2sin!4v1675766303310!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -256,7 +264,7 @@
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget">
                             <div class="footer-logo mb-30">
-                                <a href="#"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
+                                <a href="#"><img src="{% static 'img/core-img/logo.png' %}" class="logo" alt=""></a>
                             </div>
                             <p>Lorem ipsum dolor sit samet, consectetur adipiscing elit. India situs atione mantor</p>
                             <div class="social-info">
