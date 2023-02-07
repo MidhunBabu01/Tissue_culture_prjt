@@ -1,6 +1,13 @@
 from django.shortcuts import render
 from django.http.response import HttpResponse
 from.models import Products,ProductsCategory
+from django.shortcuts import redirect
+# MAIL SENDING SECTION
+from django.core.mail import  EmailMessage
+from django.conf import settings
+from django.template.loader import render_to_string
+from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib import messages
 
 # Create your views here.
 def index(request):
@@ -28,4 +35,22 @@ def products_details(request,slug):
 
 
 def contact_us(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        mobile = request.POST.get('mobile')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+        template = render_to_string('email.html',{'name':name,'phone':mobile,'subject':subject,'message':message,'emaill':email})
+        email = EmailMessage(
+            'Enquiry', #subject
+            template, #body
+            email, #sender mail id
+            ['midhunkb57@gmail.com'] #recever mail id
+        )
+        email.fail_silently = False
+        email.send()
+        messages.success(request,'Email send succesfully')
+        print('Email Send')
+        return redirect('Plant_app:contact_us')
     return render(request,'contact.html')
