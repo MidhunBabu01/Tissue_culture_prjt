@@ -389,6 +389,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- ##### Footer Area End ##### -->
 
     <!-- ##### All Javascript Files ##### -->
+    {% for message in messages %}
+    {% if message.tags == 'success' %}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        var m="{{message}}";
+        swal("Form Submitted succesfully!","",'success')
+        {% comment %} swal("Perfect!", m, "success") {% endcomment %}
+    </script>
+    {% endif %}
+    {% endfor %}
     <!-- jQuery-2.2.4 js -->
     <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
     <!-- Popper js -->

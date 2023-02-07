@@ -37,15 +37,16 @@ def products_details(request,slug):
 def contact_us(request):
     if request.method == 'POST':
         name = request.POST.get('name')
-        email = request.POST.get('email')
+        emaill = request.POST.get('email')
+        # print('EMAIL',email)
         mobile = request.POST.get('mobile')
         subject = request.POST.get('subject')
         message = request.POST.get('message')
-        template = render_to_string('email.html',{'name':name,'phone':mobile,'subject':subject,'message':message,'emaill':email})
+        template = render_to_string('email.html',{'name':name,'phone':mobile,'subject':subject,'message':message,'emaill':emaill})
         email = EmailMessage(
             'Enquiry', #subject
             template, #body
-            email, #sender mail id
+            emaill, #sender mail id
             ['midhunkb57@gmail.com'] #recever mail id
         )
         email.fail_silently = False
