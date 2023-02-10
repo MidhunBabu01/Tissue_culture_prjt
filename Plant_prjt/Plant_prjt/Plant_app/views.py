@@ -52,6 +52,6 @@ def contact_us(request):
         email.fail_silently = False
         email.send()
         messages.success(request,'Email send succesfully')
-        print('Email Send')
+#         print('Email Send')
         return redirect('Plant_app:contact_us')
     return render(request,'contact.html')
