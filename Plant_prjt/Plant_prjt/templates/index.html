@@ -165,11 +165,32 @@
                 </div>
             </div>
 
+            <div class="single-hero-post bg-overlay">
+                <!-- Post Image -->
+                <div class="slide-img bg-img" style="background-image: url({% static 'img/bg-img/50.jpg' %});"></div>
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12">
+                            <!-- Post Content -->
+                            <div class="hero-slides-content text-center">
+                                <h2>Plants exist in the weather and light rays that surround them</h2>
+                                {% comment %} <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque ante nec ipsum iaculis, ac iaculis ipsum porttitor. Vivamus cursus nisl lectus, id mattis nisl lobortis eu. Duis diam augue, dapibus ut dolor at, mattis maximus dolor.</p> {% endcomment %}
+                                {% comment %} <div class="welcome-btn-group">
+                                    <a href="#" class="btn alazea-btn mr-30">GET STARTED</a>
+                                    <a href="#" class="btn alazea-btn active">CONTACT US</a>
+                                </div> {% endcomment %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Single Hero Post -->
             
 
         </div>
     </section>
+    
     <!-- ##### Hero Area End ##### -->
 
     <!-- ##### Service Area Start ##### -->
@@ -604,104 +625,39 @@
             <div class="row">
 
                 <!-- Single Product Area -->
+                {% for i in new_arrivals %}
                 <div class="col-12 col-sm-6 col-lg-3">
                     <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="100ms">
                         <!-- Product Image -->
-                        <div class="product-img">
-                            <a href="shop-details.html"><img src="{% static 'img/bg-img/9.jpg' %}" alt=""></a>
+                        <div class="">
+                            <a href="{% url 'Plant_app:products_details' i.slug %}"><img src="{{i.Photo1.url}}" alt=""></a>
                             <!-- Product Tag -->
-                            <div class="product-tag">
+                            {% comment %} <div class="product-tag">
                                 <a href="#">Hot</a>
-                            </div>
-                            <div class="product-meta d-flex">
+                            </div> {% endcomment %}
+                            {% comment %} <div class="product-meta d-flex">
                                 <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
                                 <a href="cart.html" class="add-to-cart-btn">Add to cart</a>
                                 <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                            </div>
+                            </div> {% endcomment %}
                         </div>
                         <!-- Product Info -->
                         <div class="product-info mt-15 text-center">
                             <a href="shop-details.html">
-                                <p>Cactus Flower</p>
+                                <p><a href="{% url 'Plant_app:products_details' i.slug %}">{{i.name}}</p>
                             </a>
-                            <h6>$10.99</h6>
+                            {% comment %} <h6>$10.99</h6> {% endcomment %}
                         </div>
                     </div>
                 </div>
-
-                <!-- Single Product Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="200ms">
-                        <!-- Product Image -->
-                        <div class="product-img">
-                            <a href="shop-details.html"><img src="{% static 'img/bg-img/10.jpg' %}" alt=""></a>
-                            <div class="product-meta d-flex">
-                                <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                                <a href="cart.html" class="add-to-cart-btn">Add to cart</a>
-                                <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                            </div>
-                        </div>
-                        <!-- Product Info -->
-                        <div class="product-info mt-15 text-center">
-                            <a href="shop-details.html">
-                                <p>Cactus Flower</p>
-                            </a>
-                            <h6>$10.99</h6>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Product Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Product Image -->
-                        <div class="product-img">
-                            <a href="shop-details.html"><img src="{% static 'img/bg-img/11.jpg' %}" alt=""></a>
-                            <div class="product-meta d-flex">
-                                <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                                <a href="cart.html" class="add-to-cart-btn">Add to cart</a>
-                                <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                            </div>
-                        </div>
-                        <!-- Product Info -->
-                        <div class="product-info mt-15 text-center">
-                            <a href="shop-details.html">
-                                <p>Cactus Flower</p>
-                            </a>
-                            <h6>$10.99</h6>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Product Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="400ms">
-                        <!-- Product Image -->
-                        <div class="product-img">
-                            <a href="shop-details.html"><img src="{% static 'img/bg-img/12.jpg' %}" alt=""></a>
-                            <!-- Product Tag -->
-                            <div class="product-tag sale-tag">
-                                <a href="#">Hot</a>
-                            </div>
-                            <div class="product-meta d-flex">
-                                <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                                <a href="cart.html" class="add-to-cart-btn">Add to cart</a>
-                                <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                            </div>
-                        </div>
-                        <!-- Product Info -->
-                        <div class="product-info mt-15 text-center">
-                            <a href="shop-details.html">
-                                <p>Cactus Flower</p>
-                            </a>
-                            <h6>$10.99</h6>
-                        </div>
-                    </div>
-                </div>
-
+                {% endfor %}
                 <div class="col-12 text-center">
-                    <a href="#" class="btn alazea-btn">View All</a>
+                    <a href="{% url 'Plant_app:products' %}" class="btn alazea-btn">View All</a>
                 </div>
+
+                
+
+                
 
             </div>
         </div>
@@ -786,7 +742,7 @@
     <!-- ##### Blog Area End ##### -->
 
     <!-- ##### Subscribe Area Start ##### -->
-    <section class="subscribe-newsletter-area" style="background-image: url({% static 'img/bg-img/subscribe.png' %});">
+    {% comment %} <section class="subscribe-newsletter-area" style="background-image: url({% static 'img/bg-img/subscribe.png' %});">
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-12 col-lg-5">
@@ -811,7 +767,7 @@
         <div class="subscribe-side-thumb wow fadeInUp" data-wow-delay="500ms">
             <img class="first-img" src="{% static 'img/core-img/leaf.png' %}" alt="">
         </div>
-    </section>
+    </section> {% endcomment %}
     <!-- ##### Subscribe Area End ##### -->
 
     <!-- ##### Contact Area Start ##### -->
@@ -827,20 +783,26 @@
                     <!-- Contact Form Area -->
                     <div class="contact-form-area mb-100">
                         <form action="#" method="post">
+                            {% csrf_token %}
                             <div class="row">
-                                <div class="col-12 col-sm-6">
+                                <div class="col-12 col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="contact-name" placeholder="Your Name">
+                                        <input type="text" class="form-control" name='name' id="contact-name" placeholder="Name">
                                     </div>
                                 </div>
-                                <div class="col-12 col-sm-6">
+                                <div class="col-12 col-md-6">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" id="contact-email" placeholder="Your Email">
+                                        <input type="email" class="form-control" name='email' id="contact-email" placeholder="Email">
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-12 col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="contact-subject" placeholder="Subject">
+                                        <input type="number" class="form-control" name='mobile' id="contact-subject" placeholder="Mobile">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name='subject' id="contact-subject" placeholder="Subject">
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -868,7 +830,7 @@
     <!-- ##### Contact Area End ##### -->
 
     <!-- ##### Footer Area Start ##### -->
-    <footer class="footer-area bg-img" style="background-image: url({% static 'img/bg-img/3.jpg' %});">
+    <footer class="footer-area bg-img" style="background-image: url({% static 'img/bg-img/22.jpg' %});">
         <!-- Main Footer Area -->
         <div class="main-footer-area">
             <div class="container">
@@ -880,13 +842,13 @@
                             <div class="footer-logo mb-30">
                                 <a href="#"><img src="{% static 'img/core-img/logo.png' %}" class="logo" alt=""></a>
                             </div>
-                            <p>Lorem ipsum dolor sit samet, consectetur adipiscing elit. India situs atione mantor</p>
+                            {% comment %} <p>Lorem ipsum dolor sit samet, consectetur adipiscing elit. India situs atione mantor</p> {% endcomment %}
                             <div class="social-info">
-                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <a href="https://wa.link/8xtx8m"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                                <a href="https://instagram.com/neyyargreenworld?igshid=ZDdkNTZiNTM="><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=100078814719873&mibextid=ZbWKwL"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                {% comment %} <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> {% endcomment %}
+                                <a href="https://www.linkedin.com/in/prasanth-prabhakar-42763721b"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
@@ -899,23 +861,23 @@
                             </div>
                             <nav class="widget-nav">
                                 <ul>
-                                    <li><a href="#">Purchase</a></li>
-                                    <li><a href="#">FAQs</a></li>
-                                    <li><a href="#">Payment</a></li>
-                                    <li><a href="#">News</a></li>
-                                    <li><a href="#">Return</a></li>
+                                    <li><a href="{% url 'Plant_app:index' %}">Home</a></li>
+                                    <li><a href="{% url 'Plant_app:about' %}">About</a></li>
+                                    <li><a href="{% url 'Plant_app:products' %}">Products</a></li>
+                                    <li><a href="{% url 'Plant_app:contact_us' %}">Contat Us</a></li>
+                                    {% comment %} <li><a href="#">Return</a></li>
                                     <li><a href="#">Advertise</a></li>
                                     <li><a href="#">Shipping</a></li>
                                     <li><a href="#">Career</a></li>
                                     <li><a href="#">Orders</a></li>
-                                    <li><a href="#">Policities</a></li>
+                                    <li><a href="#">Policities</a></li> {% endcomment %}
                                 </ul>
                             </nav>
                         </div>
                     </div>
 
                     <!-- Single Footer Widget -->
-                    <div class="col-12 col-sm-6 col-lg-3">
+                    {% comment %} <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget">
                             <div class="widget-title">
                                 <h5>BEST SELLER</h5>
@@ -943,7 +905,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> {% endcomment %}
 
                     <!-- Single Footer Widget -->
                     <div class="col-12 col-sm-6 col-lg-3">
@@ -953,11 +915,11 @@
                             </div>
 
                             <div class="contact-information">
-                                <p><span>Address:</span> 505 Silk Rd, New York</p>
-                                <p><span>Phone:</span> +1 234 122 122</p>
-                                <p><span>Email:</span> info.deercreative@gmail.com</p>
-                                <p><span>Open hours:</span> Mon - Sun: 8 AM to 9 PM</p>
-                                <p><span>Happy hours:</span> Sat: 2 PM to 4 PM</p>
+                                <p><span>Address:</span> 16/295 Kakkamukal, Kattakkada <br>Thiruvanannthapuram, kerala 695572</p>
+                                <p><span>Phone:</span> +91 6363290771</p>
+                                <p><span>Email:</span> neyyargreenworld@gmail.com</p>
+                                <p><span>Open hours:</span> Mon - Sun: 9 AM to 6 PM</p>
+                                {% comment %} <p><span>Happy hours:</span> Sat: 2 PM to 4 PM</p> {% endcomment %}
                             </div>
                         </div>
                     </div>
@@ -976,13 +938,13 @@
                     <div class="col-12 col-md-6">
                         <div class="copywrite-text">
                             <p>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </p>
                         </div>
                     </div>
                     <!-- Footer Nav -->
-                    <div class="col-12 col-md-6">
+                    {% comment %} <div class="col-12 col-md-6">
                         <div class="footer-nav">
                             <nav>
                                 <ul>
@@ -995,7 +957,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                                 </ul>
                             </nav>
                         </div>
-                    </div>
+                    </div> {% endcomment %}
                 </div>
             </div>
         </div>
@@ -1003,6 +965,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- ##### Footer Area End ##### -->
 
     <!-- ##### All Javascript Files ##### -->
+    {% for message in messages %}
+    {% if message.tags == 'success' %}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        var m="{{message}}";
+        swal("Form Submitted succesfully!","",'success')
+        {% comment %} swal("Perfect!", m, "success") {% endcomment %}
+    </script>
+    {% endif %}
+    {% endfor %}
     <!-- jQuery-2.2.4 js -->
     <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
     <!-- Popper js -->

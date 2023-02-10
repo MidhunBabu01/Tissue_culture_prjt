@@ -11,7 +11,29 @@ from django.contrib import messages
 
 # Create your views here.
 def index(request):
-    return render(request,'index.html')
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        emaill = request.POST.get('email')
+        # print('EMAIL',email)
+        mobile = request.POST.get('mobile')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+        template = render_to_string('email.html',{'name':name,'phone':mobile,'subject':subject,'message':message,'emaill':emaill})
+        email = EmailMessage(
+            'Enquiry', #subject
+            template, #body
+            emaill, #sender mail id
+            ['midhunkb57@gmail.com'] #recever mail id
+        )
+        email.fail_silently = False
+        email.send()
+        messages.success(request,'Email send succesfully')
+        # print('Email Send')
+        return redirect('Plant_app:index')
+
+
+    new_arrivals = Products.objects.all()[:4]
+    return render(request,'index.html',{'new_arrivals':new_arrivals})
 
 
 

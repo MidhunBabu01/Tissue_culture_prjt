@@ -81,26 +81,26 @@ WSGI_APPLICATION = 'Plant_prjt.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'plant_db',
-#         'USER': 'root',
-#         'PASSWORD': '',
-#         'HOST': 'localhost'
-#     }
-# }
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'plant_db',
-        'USER': 'admin',
-        'PASSWORD': 'SXjotGXoyB8qzrSRMcse',
-        'HOST': 'plantdb.ccjr5p1yyw4e.us-east-1.rds.amazonaws.com',
-        'PORT': '3306',
-    },
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost'
+    }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'plant_db',
+#         'USER': 'admin',
+#         'PASSWORD': 'SXjotGXoyB8qzrSRMcse',
+#         'HOST': 'plantdb.ccjr5p1yyw4e.us-east-1.rds.amazonaws.com',
+#         'PORT': '3306',
+#     },
+# }
 
 
 
